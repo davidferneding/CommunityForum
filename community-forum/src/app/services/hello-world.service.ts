@@ -15,8 +15,6 @@ export class HelloWorldService {
   }
 
   public getSecretHelloWorld(): Observable<any> {
-    return this.http.get<any>("//localhost:8080/secret-hello-world", {
-      headers: new HttpHeaders().set("Authorization", "Basic " + btoa("admin:admin"))
-    });
+    return this.http.get<any>("//localhost:8080/secret-hello-world");
   }
 }
